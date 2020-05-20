@@ -84,7 +84,7 @@ function Layout() {
                 <Col xs="3">
                     {pathPoints.length > 0 &&
                         <div className="result">
-                            <h4 style={{textAlign: "left", color: "green"}}>Start Point: (0,0)</h4>
+                            <h4 style={{textAlign: "left", color: "cyan"}}>Start Point: (0,0)</h4>
                             <h4 style={{textAlign: "left", color: "red"}}>End Point: ({endPointX},{endPointY})</h4>
                         </div>
                     }
@@ -101,7 +101,7 @@ function Layout() {
                             {crossedPoints.map((point, i) => (
                                 <Circle key={`entity-${i}`} x={screenOriginX+point.x} y={screenOriginY+point.y} radius={2} fill="blue" />
                             ))}                    
-                            <Circle x={screenOriginX} y={screenOriginY} radius={5} fill={finalPlotPoints.length>0 ? "green" : "black"} />
+                            <Circle x={screenOriginX} y={screenOriginY} radius={5} fill={finalPlotPoints.length>0 ? "cyan" : "black"} />
                             <Circle x={screenOriginX+finalPlotPoints[finalPlotPoints.length-2]} y={screenOriginY+finalPlotPoints[finalPlotPoints.length-1]} radius={5} fill={finalPlotPoints.length>0 ? "red" : "black"} />
                         </Layer>
                     </Stage>    
